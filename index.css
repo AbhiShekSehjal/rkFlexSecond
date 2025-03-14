@@ -1,0 +1,1198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scrollbar-width: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar {
+    background-color: rgb(70, 97, 176);
+    display: flex;
+    padding: 20px 10px;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 222;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 8px;
+
+}
+
+.logo {
+    flex: 2;
+    font-size: 26px;
+    font-weight: bolder;
+
+}
+
+.search-box {
+    padding: 6px;
+    align-self: center;
+    flex: 3;
+    border: 2px solid;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.search::placeholder {
+    color: white;
+}
+
+.nav-links {
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hamburger {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    cursor: pointer;
+}
+
+.line1 {
+    background-color: whitesmoke;
+    height: 3px;
+    width: 30px;
+    transition: all 0.7s ease;
+    transform-origin: left;
+}
+
+.line2 {
+    background-color: whitesmoke;
+    height: 3px;
+    width: 30px;
+    transition: all 0.7s ease;
+}
+
+.line3 {
+    background-color: whitesmoke;
+    height: 3px;
+    width: 30px;
+    transition: all 0.7s ease;
+    transform-origin: left;
+}
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: indianred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+    transition: all 0.4s ease-in;
+}
+
+.sidebar-nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-nav-links li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.crossbtn {
+    position: absolute;
+    bottom: 160px;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.whatsapp-logo {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    justify-content: space-around;
+    background-color: #075E54;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 222;
+}
+
+#whatsapp-icon {
+    font-size: 22px;
+    color: white !important;
+}
+
+/* mainBox */
+.mainBox {
+    height: 100vh;
+    background: url("/images/living-room-581073.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.mainBox h1 {
+    font-size: 150px;
+    font-weight: 900;
+    z-index: 2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mainBox p {
+    z-index: 2;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: serif;
+}
+
+.shopBtn {
+    z-index: 2;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shopBtn button {
+    z-index: 2;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.shopBtn button:hover {
+    background-color: rgb(70, 97, 176);
+    color: white;
+}
+
+.overShade {
+    background-color: rgba(0, 0, 0, 0.237);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+/* SelectByColors */
+.SelectByColors {
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
+
+.SelectByColors h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: black;
+}
+
+.wallpaperColors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.redColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/red.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.redColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.redColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.redColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.redColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.redColor:hover h1,
+.redColor:hover button,
+.redColor:hover .overFade {
+    opacity: 1;
+}
+
+.blueColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/blue.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.blueColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.blueColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.blueColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.blueColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.blueColor:hover button,
+.blueColor:hover h1,
+.blueColor:hover .overFade {
+    opacity: 1;
+}
+
+
+.greenColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/green.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+.greenColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.greenColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.greenColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.greenColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.greenColor:hover button,
+.greenColor:hover h1,
+.greenColor:hover .overFade {
+    opacity: 1;
+}
+
+
+.blackColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/black.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+.blackColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.blackColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.blackColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.blackColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.blackColor:hover button,
+.blackColor:hover h1,
+.blackColor:hover .overFade {
+    opacity: 1;
+}
+
+
+
+.orangeColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/orange.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+.orangeColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.orangeColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+
+
+.orangeColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.orangeColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.orangeColor:hover button,
+.orangeColor:hover h1,
+.orangeColor:hover .overFade {
+    opacity: 1;
+}
+
+
+.goldenColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/golden.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+.goldenColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.goldenColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+
+.goldenColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.goldenColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.goldenColor:hover button,
+.goldenColor:hover h1,
+.goldenColor:hover .overFade {
+    opacity: 1;
+}
+
+.whiteColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/white.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+
+.whiteColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.whiteColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.whiteColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.whiteColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.whiteColor:hover button,
+.whiteColor:hover h1,
+.whiteColor:hover .overFade {
+    opacity: 1;
+}
+
+
+.yellowColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/yellow.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+
+.yellowColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.yellowColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.yellowColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.yellowColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+
+.yellowColor:hover button,
+.yellowColor:hover h1,
+.yellowColor:hover .overFade {
+    opacity: 1;
+}
+
+.skyBlueColor {
+    height: 200px;
+    width: 200px;
+    background: url("/images/skyblue.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+
+
+.skyBlueColor button {
+    opacity: 0;
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.58);
+    color: white;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.skyBlueColor button:hover {
+    width: 60%;
+    height: 15%;
+    border-radius: 30px;
+    font-size: 18px;
+    z-index: 33;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.skyBlueColor h1 {
+    opacity: 0;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    z-index: 22;
+}
+
+.skyBlueColor .overFade {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.482);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.skyBlueColor:hover button,
+.skyBlueColor:hover h1,
+.skyBlueColor:hover .overFade {
+    opacity: 1;
+}
+
+/* selectByRoom */
+.selectByRoom {
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.selectByRoom h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: black;
+}
+
+.typeOfRooms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+
+.kidsRoom:hover,
+.pujaRoom:hover,
+.drawingRoom:hover,
+.kitchenroom:hover,
+.livingRoom:hover,
+.library:hover,
+.diningRoom:hover {
+    background-position: right;
+    background-size: cover;
+}
+
+.kidsRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/kids.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.kidsRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+.pujaRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/puja.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+.pujaRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.drawingRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/drawing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.drawingRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.kitchenroom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/kitchen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.kitchenroom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.livingRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/living.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.livingRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.library {
+    height: 350px;
+    width: 300px;
+    background: url("/images/library.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.library h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.diningRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/dining.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.diningRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+/* ourSpecialWallpapers */
+.ourSpecialWallpapers {
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.ourSpecialWallpapers h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: black;
+    margin: 40px 0px;
+}
+
+.specials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    /* padding: 20px; */
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 26px;
+    position: absolute;
+    color: white;
+    top: 200px;
+}
+
+.product-card p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.btn {
+    position: absolute;
+    top: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+}
+
+.socialMediaLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.socialMediaLinks .insta,
+.socialMediaLinks .fb,
+.socialMediaLinks .twitter {
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    transition: all 0.4s ease;
+}
+
+.socialMediaLinks .insta:hover,
+.socialMediaLinks .fb:hover,
+.socialMediaLinks .twitter:hover {
+    background-color: rgb(70, 97, 176);
+    color: white;
+}
+
+.emailAddress span,
+.contactNumber span {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+@media (max-width:600px) {
+    .nav-links {
+        display: none;
+    }
+}
