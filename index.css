@@ -147,6 +147,14 @@
     bottom: 160px;
     font-size: 34px;
     cursor: pointer;
+    transform: scale(1);
+    transform-origin: center;
+    transition: all 0.2s ease;
+}
+
+.crossbtn:hover {
+    color: rgb(144, 144, 183);
+    transform: scale(0.9);
 }
 
 .whatsapp-logo {
