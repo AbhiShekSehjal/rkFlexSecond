@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 .navbar {
@@ -29,7 +30,8 @@
     flex: 2;
     font-size: 26px;
     font-weight: bolder;
-
+    display: flex;
+    align-items: center;
 }
 
 .search-box {
@@ -68,6 +70,11 @@
     color: whitesmoke;
     font-size: 18px;
     font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(144, 144, 183);
 }
 
 .hamburger {
@@ -105,7 +112,7 @@
 .sidebar {
     position: fixed;
     top: 70px;
-    right: -300px;
+    right: -500px;
     width: 300px;
     height: 100vh;
     background-color: indianred;
@@ -129,6 +136,11 @@
     color: whitesmoke;
     font-size: 26px;
     font-weight: 900;
+    transition: all 0.5s ease;
+}
+
+.sidebar-nav-links li a:hover {
+    color: rgb(144, 144, 183);
 }
 
 .crossbtn {
@@ -891,12 +903,42 @@
     height: 100%;
     padding: 30px;
     text-align: center;
+    position: relative;
 }
 
 .selectByRoom h1 {
     font-size: 36px;
     font-weight: bolder;
     color: black;
+}
+
+.leftsideleafsPng {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 500px;
+    width: 500px;
+    background: url("/images/leafs.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.rigntsideleafsPng {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    rotate: 180deg;
+    height: 400px;
+    width: 400px;
+    background: url("/images/leafs.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
 }
 
 .typeOfRooms {
@@ -910,6 +952,8 @@
 
 
 .kidsRoom:hover,
+.boysRoom:hover,
+.girlsRoom:hover,
 .pujaRoom:hover,
 .drawingRoom:hover,
 .kitchenroom:hover,
@@ -935,6 +979,46 @@
 }
 
 .kidsRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.boysRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/boys.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.boysRoom h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.girlsRoom {
+    height: 350px;
+    width: 300px;
+    background: url("/images/girls.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.girlsRoom h1 {
     color: white;
     font-size: 30px;
     font-weight: 800;
@@ -1089,6 +1173,7 @@
     height: 100%;
     padding: 30px;
     text-align: center;
+
 }
 
 .ourSpecialWallpapers h1 {
@@ -1102,7 +1187,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    /* padding: 20px; */
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -1143,6 +1227,97 @@
     padding: 8px 12px;
     border: none;
     cursor: pointer;
+}
+
+/* testimonials */
+.Testimonials {
+    margin: 30px 0px 50px 0px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("/images/forTestimonials.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+.Testimonials h1 {
+    position: absolute;
+    top: 35px;
+    color: white;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.overfade {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.leftBtn {
+    position: absolute;
+    left: 50px;
+    font-size: 36px;
+    color: aliceblue;
+    z-index: 22;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.rightBtn:hover,
+.leftBtn:hover {
+    color: rgb(70, 97, 176);
+}
+
+.rightBtn {
+    position: absolute;
+    right: 50px;
+    font-size: 36px;
+    color: aliceblue;
+    z-index: 22;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50px 0px;
+    position: absolute;
+    width: 50%;
+    padding: 30px;
+    background-color: rgba(250, 235, 215, 0.468);
+    text-align: center;
+}
+
+.testimonial h3 {
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.testimonial p {
+    color: black;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.testimonial p::before {
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize;
+    content: "from:";
+    margin-right: 10px;
 }
 
 /* footer */
@@ -1191,8 +1366,98 @@
     margin-right: 10px;
 }
 
-@media (max-width:600px) {
+@media (max-width:900px) {
     .nav-links {
         display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .mainBox h1 {
+        font-size: 72px;
+    }
+
+    .mainBox p {
+        font-size: 18px;
+    }
+
+    .selectByRoom h1,
+    .ourSpecialWallpapers h1,
+    .SelectByColors h1,
+    .Testimonials h1 {
+        font-size: 24px;
+    }
+
+    .testimonial h3 {
+        font-size: 12px;
+    }
+
+    .testimonial p {
+        font-size: 10px;
+    }
+
+    .socialMediaLinks .insta,
+    .socialMediaLinks .fb,
+    .socialMediaLinks .twitter {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .emailAddress,
+    .contactNumber {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:430px) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-box {
+        font-size: 12px;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        height: 2px;
+    }
+
+    .sidebar {
+        top: 51px;
+    }
+
+    .whatsapp-logo {
+        padding: 6px 5px;
+        width: 140px;
+    }
+
+    .mainBox h1 {
+        font-size: 56px;
+    }
+
+    .mainBox p {
+        font-size: 16px;
+    }
+
+    .selectByRoom h1,
+    .ourSpecialWallpapers h1,
+    .SelectByColors h1,
+    .Testimonials h1 {
+        font-size: 18px;
+    }
+
+    .leftBtn {
+        left: 10px;
+    }
+
+    .rightBtn {
+        right: 10px;
     }
 }

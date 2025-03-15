@@ -5,6 +5,7 @@ let line3 = document.getElementById("line3");
 let sidebar = document.getElementById("sidebar");
 let crossbtn = document.getElementById("crossbtn");
 
+// for navbar
 hamburger.addEventListener("click", () => {
     if (line2.style.opacity === "0") {
         line2.style.opacity = "1";
@@ -33,45 +34,8 @@ window.addEventListener("scroll", () => {
     sidebar.style.right = "-300px";
 })
 
-
-const products = [
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/drawing.jpg", alter: "drawingWallper", heading: "4st wall", price: "4000 rs" },
-    { id: 1, image: "images/golden.jpg", alter: "goldenwallper", heading: "2st wall", price: "3800 rs" },
-    { id: 1, image: "images/green.jpg", alter: "greenWallper", heading: "3st wall", price: "6800 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/drawing.jpg", alter: "drawingWallper", heading: "4st wall", price: "4000 rs" },
-    { id: 1, image: "images/golden.jpg", alter: "goldenwallper", heading: "2st wall", price: "3800 rs" },
-    { id: 1, image: "images/green.jpg", alter: "greenWallper", heading: "3st wall", price: "6800 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/drawing.jpg", alter: "drawingWallper", heading: "4st wall", price: "4000 rs" },
-    { id: 1, image: "images/golden.jpg", alter: "goldenwallper", heading: "2st wall", price: "3800 rs" },
-    { id: 1, image: "images/green.jpg", alter: "greenWallper", heading: "3st wall", price: "6800 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-    { id: 1, image: "images/drawing.jpg", alter: "drawingWallper", heading: "4st wall", price: "4000 rs" },
-    { id: 1, image: "images/golden.jpg", alter: "goldenwallper", heading: "2st wall", price: "3800 rs" },
-    { id: 1, image: "images/green.jpg", alter: "greenWallper", heading: "3st wall", price: "6800 rs" },
-    { id: 1, image: "images/black.jpg", alter: "blackWallper", heading: "1st wall", price: "3000 rs" },
-    { id: 1, image: "images/blue.jpg", alter: "bluewallper", heading: "2st wall", price: "3500 rs" },
-    { id: 1, image: "images/dining.webp", alter: "diningWallper", heading: "3st wall", price: "6000 rs" },
-]
+// our specials
+import products from "./products.js";
 
 function newProducts() {
 
@@ -93,3 +57,50 @@ function newProducts() {
 }
 
 window.onload = newProducts;
+
+// testimonials
+import ourTestimonials from "./testimonials.js";
+
+let index = 0;
+
+let Testimonials = document.getElementById("Testimonials");
+let rightBtn = document.getElementById("rightBtn");
+let leftBtn = document.getElementById("leftBtn");
+
+const newTestimonial = document.createElement("div");
+
+newTestimonial.classList.add("testimonial");
+
+function updateTestimonial() {
+    newTestimonial.innerHTML = `
+            <h3>${ourTestimonials[index].text}</h3>
+            <p>${ourTestimonials[index].from}</p>
+            `;
+    Testimonials.appendChild(newTestimonial);
+}
+
+rightBtn.addEventListener("click", () => {
+    index = (index + 1) % ourTestimonials.length;
+    rightBtn.style.color = "red"
+    setTimeout(() => {
+        rightBtn.style.color = "rgb(70, 97, 176)";
+        setTimeout(() => {
+            rightBtn.style.color = "aliceblue"
+        }, 200);
+    }, 200)
+    updateTestimonial();
+})
+
+leftBtn.addEventListener("click", () => {
+    index = (index - 1 + ourTestimonials.length) % ourTestimonials.length;
+    leftBtn.style.color = "red"
+    setTimeout(() => {
+        leftBtn.style.color = "rgb(70, 97, 176)";
+        setTimeout(() => {
+            leftBtn.style.color = "aliceblue"
+        }, 200);
+    }, 200)
+    updateTestimonial();
+})
+
+updateTestimonial()
