@@ -23,7 +23,6 @@
     top: 0;
     z-index: 222;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 8px;
-    text-align: center;
 }
 
 .logo {
@@ -186,6 +185,7 @@
     justify-content: center;
     color: white;
     flex-direction: column;
+    text-align: center;
 }
 
 .mainBox h1 {
@@ -1459,5 +1459,32 @@
 
     .rightBtn {
         right: 10px;
+    }
+}
+
+@media (max-width:274px) {
+    .testimonial h3 {
+        font-size: 8px;
+    }
+
+    .testimonial p {
+        font-size: 6px;
+    }
+    .logo{
+        font-size: 12px;
+    }
+
+    .selectByRoom h1,
+    .ourSpecialWallpapers h1,
+    .SelectByColors h1,
+    .Testimonials h1 {
+        font-size: 14px;
+    }
+    .mainBox h1 {
+        font-size: 45px;
+    }
+
+    .mainBox p {
+        font-size: 12px;
     }
 }
