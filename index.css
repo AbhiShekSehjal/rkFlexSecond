@@ -247,7 +247,6 @@
 .SelectByColors h1 {
     font-size: 36px;
     font-weight: bolder;
-    color: black;
 }
 
 .wallpaperColors {
@@ -909,7 +908,6 @@
 .selectByRoom h1 {
     font-size: 36px;
     font-weight: bolder;
-    color: black;
 }
 
 .leftsideleafsPng {
@@ -1179,7 +1177,6 @@
 .ourSpecialWallpapers h1 {
     font-size: 36px;
     font-weight: bolder;
-    color: black;
     margin: 40px 0px;
 }
 
@@ -1515,6 +1512,5 @@
 @media (max-width:230px) {
     .testimonial {
         padding: 20px;
-
     }
 }
